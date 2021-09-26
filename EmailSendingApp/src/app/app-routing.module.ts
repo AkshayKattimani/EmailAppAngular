@@ -1,0 +1,23 @@
+import { HomeComponent } from './components/home/home.component';
+import { EmailComponent } from './components/email/email.component';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  {
+    path: 'mail',
+    component: EmailComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: '',
+    component: HomeComponent,
+    pathMatch: 'full',
+  },
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
+})
+export class AppRoutingModule {}
